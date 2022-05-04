@@ -2,8 +2,8 @@ name: 4DALERT_CHECK
 
 on:
   
-  check_run:
-    types: [rerequested, completed]
+  pull_request:
+    types: [opened]
 
 
 jobs:
