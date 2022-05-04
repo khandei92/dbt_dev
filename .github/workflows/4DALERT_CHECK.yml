@@ -1,6 +1,8 @@
 name: 4DALERT_CHECK
 
-on: 
+on:
+  pull_request:
+    types: [opened]
   schedule: 
     # Daily at 8:20 UTC
     - cron: '* * * * *'
