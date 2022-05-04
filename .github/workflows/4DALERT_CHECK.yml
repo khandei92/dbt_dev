@@ -1,6 +1,9 @@
 name: 4DALERT_CHECK
 
-on: workflow_dispatch
+on: 
+  schedule: 
+    # Daily at 8:20 UTC
+    - cron: '* * * * *'
 
 
 jobs:
