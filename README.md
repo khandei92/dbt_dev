@@ -2,7 +2,7 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
-Trying running the following commands:
+Tryi running the following commands:
 - dbt run
 - dbt test
 
