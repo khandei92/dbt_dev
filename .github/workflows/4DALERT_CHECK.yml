@@ -1,11 +1,11 @@
 name: 4DALERT_CHECK
 
 on:
-  check_suite:
+  
+  pull_request:
+   types: [opened]
+  check_run:
     types: [completed]
-  #pull_request:
-   # types: [opened]
- 
 
 
 jobs:
