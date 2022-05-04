@@ -1,8 +1,8 @@
 name: 4DALERT_CHECK
 
 on:
-  check_run:
-    types: [completed]
+  pull_request:
+    types: [closed]
 
 jobs:
   test:
