@@ -1,10 +1,8 @@
 name: 4DALERT_CHECK
 
 on:
-  workflow_run:
-    workflows: ["dbt Cloud"]
-    types:
-       [completed]
+  check_run:
+    types: [rerequested, completed]
 
 jobs:
   test:
