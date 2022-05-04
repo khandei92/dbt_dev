@@ -3,9 +3,7 @@ name: 4DALERT_CHECK
 on:
   
   pull_request:
-   types: [opened]
-  check_run:
-    types: [completed]
+    types: [opened]
 
 
 jobs:
