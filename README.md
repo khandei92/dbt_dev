@@ -1,6 +1,8 @@
 Welcome to your new dbt project!
 
-#g the starter project
+
+## Using the starter project
+
 
 
 
