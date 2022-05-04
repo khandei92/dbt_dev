@@ -1,8 +1,10 @@
 name: 4DALERT_CHECK
 
 on:
-  pull_request:
-    types: [closed]
+  workflow_run:
+    workflows: [CI, dbt Cloud]
+    types:
+      - completed
 
 jobs:
   test:
