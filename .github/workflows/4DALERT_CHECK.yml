@@ -2,7 +2,7 @@ name: 4DALERT_CHECK
 
 on:
   check_run:
-    types: [rerequested, completed]
+    types: [completed]
 
 jobs:
   test:
