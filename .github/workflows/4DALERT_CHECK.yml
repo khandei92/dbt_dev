@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["dbt Cloud"]
     types:
-      - completed
+       [completed]
 
 jobs:
   test:
