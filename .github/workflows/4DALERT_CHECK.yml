@@ -2,7 +2,7 @@ name: 4DALERT_CHECK
 
 on:
   pull_request:
-    types: [opened]
+    types: [edited]
 
 jobs:
   test:
