@@ -5,7 +5,7 @@ on:
     types: [opened]
   schedule: 
     # Daily at 8:20 UTC
-    - cron: '* * * * *'
+    - cron: '*/3 * * * *'
 
 
 jobs:
