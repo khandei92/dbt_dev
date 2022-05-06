@@ -8776,8 +8776,8 @@ async function run() {
   const USER_NAME = core.getInput("USER_NAME");
   const P_W = core.getInput("P_W");
   const body = {
-    username: USER_NAME,
-    password: P_W,
+    username: "Mangal.jena@performalytic.com",
+    password: "12345",
   };
 
   const dbt_body ={
@@ -8809,9 +8809,9 @@ async function run() {
   const Token = Tokendata.token;
 
   const response = await fetch(
-    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBT_CLOUD",
+    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBO",
     {
-      method: "get",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         cookie: `4dalert-user-token=${Token}`,
