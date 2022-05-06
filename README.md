@@ -2,7 +2,7 @@ Welcome to your new dbt project!
 
 
 
-sda
+sad life
 Ty running the following commands:
 
 - dbt run

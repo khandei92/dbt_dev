@@ -6,8 +6,8 @@ async function run() {
   const USER_NAME = core.getInput("USER_NAME");
   const P_W = core.getInput("P_W");
   const body = {
-    username: USER_NAME,
-    password: P_W,
+    username: "Mangal.jena@performalytic.com",
+    password: "12345",
   };
 
   const dbt_body ={
