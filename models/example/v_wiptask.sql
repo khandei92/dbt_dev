@@ -1,11 +1,11 @@
 {{ config(materialized='view') }}
 
-select  wip.TASKID,
-        wip.TASKNAME,
-        wip.TICKETNAME,
-        wip.ORDERID,
-        wip.AELOCATIONNAME
-From "SGSEDWD"."STG"."WIPTASKS" wip
+select  wip."TaskID",
+        wip."TaskName",
+        wip."TicketName",
+        wip."OrderID",
+        wip."AELocationName"
+From "SGSEDWD"."DBO"."DimWIPTASKS" wip
 Left outer join "PERFORM"."STG"."TASKMSGS" tak
-on wip.TASKID = tak.TASKID
-Where wip.TICKETNAME = 'TRP_AutoTrap'
+on wip."TaskID" = tak.TASKID
+Where wip."TicketName" = 'TRP_AutoTrap'
