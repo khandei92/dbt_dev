@@ -3,12 +3,30 @@ const github = require("@actions/github");
 const fetch = require("node-fetch");
 
 async function run() {
-    const USER_NAME = core.getInput("USER_NAME");
-    const P_W = core.getInput("P_W");
+  const USER_NAME = core.getInput("USER_NAME");
+  const P_W = core.getInput("P_W");
   const body = {
     username: USER_NAME,
     password: P_W,
   };
+
+  const dbt_body ={
+    "cause": "Triggered via API",
+    "git_sha": ""
+  }
+
+  const dbtResponse = await fetch(
+    "https://cloud.getdbt.com/api/v2/accounts/59838/jobs/82836/run/",
+    {
+      method: "post",
+      body: JSON.stringify(dbt_body),
+      headers: { 'Authorization': 'Bearer ' +'dbts_VI8YPnwVLObW4GvtUQX320NhIWBkKqwaYYRt4bargyqEX-OnVkzyzx3w==', "Content-Type": "application/json" },
+    }
+  );
+  const dbt_res = await dbtResponse.json();
+  console.log({ dbt_res });
+
+
   const TokenFetchResponse = await fetch(
     "http://40.122.209.231/api/v1/users/login-user",
     {
@@ -21,9 +39,9 @@ async function run() {
   const Token = Tokendata.token;
 
   const response = await fetch(
-    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBT_CLOUD",
+    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBO",
     {
-      method: "get",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         cookie: `4dalert-user-token=${Token}`,

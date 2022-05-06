@@ -1,9 +1,6 @@
 Welcome to your new dbt project!
 
 
-## Using the starter project
-
-
 
 
 Ty running the following commands:
