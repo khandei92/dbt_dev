@@ -39,9 +39,9 @@ async function run() {
   const Token = Tokendata.token;
 
   const response = await fetch(
-    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBT_CLOUD",
+    "http://40.122.209.231/api/v1/4d/ci/cd/get-table-details-from-schema?offset=0&limit=100&SystemName=PERFORM&SchemaName=DBO",
     {
-      method: "get",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         cookie: `4dalert-user-token=${Token}`,
