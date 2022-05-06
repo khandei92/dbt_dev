@@ -5,7 +5,7 @@ select  wip.TASKID,
         wip.TICKETNAME,
         wip.ORDERID,
         wip.AELOCATIONNAME
-From "PERFORM"."STG"."WIPTASKS" wip
+From "SGSEDWD"."STG"."WIPTASKS" wip
 Left outer join "PERFORM"."STG"."TASKMSGS" tak
 on wip.TASKID = tak.TASKID
 Where wip.TICKETNAME = 'TRP_AutoTrap'
