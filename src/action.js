@@ -48,10 +48,11 @@ async function run() {
       },
     }
   );
+  
   const ResonseData = await response.text();
   console.log("ResonseData : ", ResonseData);
 
-  const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
+  const GITHUB_TOKEN = "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"
   const octokit = github.getOctokit(GITHUB_TOKEN);
 
   const { context = {} } = github;
