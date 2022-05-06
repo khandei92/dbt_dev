@@ -3,7 +3,7 @@ Welcome to your new dbt project!
 
 
 sad life
-Ty running the following commands:
+Ty running the following co
 
 - dbt run
 - dbt test
