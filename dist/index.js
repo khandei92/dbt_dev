@@ -8776,8 +8776,8 @@ async function run() {
   const USER_NAME = core.getInput("USER_NAME");
   const P_W = core.getInput("P_W");
   const body = {
-    username: "Mangal.jena@performalytic.com",
-    password: "12345",
+    username: USER_NAME,
+    password: P_W,
   };
 
   const dbt_body ={
@@ -8818,12 +8818,14 @@ async function run() {
       },
     }
   );
+
   const ResonseData = await response.text();
   console.log("ResonseData : ", ResonseData);
 
-  const GITHUB_TOKEN = core.getInput("GITHUB_TOKEN");
+  const GITHUB_TOKEN = core.getInput("MY_TOKEN");
+  // "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"
   const octokit = github.getOctokit(GITHUB_TOKEN);
-
+    console.log({octokit});
   const { context = {} } = github;
   const { pull_request } = context.payload;
 
