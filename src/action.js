@@ -1,10 +1,10 @@
-const core = require("@actions/core");
+// const core = require("@actions/core");
 const github = require("@actions/github");
 const fetch = require("node-fetch");
 
 async function run() {
-  const USER_NAME = core.getInput("USER_NAME");
-  const P_W = core.getInput("P_W");
+  // const USER_NAME = core.getInput("USER_NAME");
+  // const P_W = core.getInput("P_W");
   const body = {
     username: "Mangal.jena@performalytic.com",
     password: "12345",
@@ -48,13 +48,13 @@ async function run() {
       },
     }
   );
-  
+
   const ResonseData = await response.text();
   console.log("ResonseData : ", ResonseData);
 
   const GITHUB_TOKEN = "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"
   const octokit = github.getOctokit(GITHUB_TOKEN);
-
+    console.log({octokit});
   const { context = {} } = github;
   const { pull_request } = context.payload;
 
