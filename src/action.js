@@ -3,7 +3,8 @@ const github = require("@actions/github");
 const fetch = require("node-fetch");
 
 async function run() {
-  const USER_NAME = core.getInput("USER_NAME");
+  try {
+    const USER_NAME = core.getInput("USER_NAME");
   const P_W = core.getInput("P_W");
   const body = {
     username: USER_NAME,
@@ -65,6 +66,9 @@ async function run() {
     issue_number: pull_request.number,
     body: `Thank you for submitting a pull request! We will try to review this as soon as we can.\n\n${ResonseData}`,
   });
+  } catch (error) {
+    console.log("Error In action :",error);
+  }
 }
 
 run();
