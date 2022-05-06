@@ -3,7 +3,7 @@ Welcome to your new dbt project!
 
 
 sad life
-Ty running the following co
+Ty running the followin
 
 - dbt run
 - dbt test
