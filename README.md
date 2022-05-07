@@ -1,15 +1,17 @@
 Welcome to your new dbt project!
 
-
+##
 
 sad life
-Ty running the followin
+Ty running the following
 
 - dbt run
 - dbt test
 
 saazaa
+
 ### Resources:
+
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
